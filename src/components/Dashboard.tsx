@@ -73,6 +73,9 @@ const Dashboard = () => {
   return (
     <div className="bg-gray-100 min-h-screen py-10">
       <div className="container mx-auto">
+        <div className="flex items-center space-x-2 ml-4 mb-6  justify-start">
+          <Link to="https://docs.google.com/spreadsheets/d/11oKN9ea6VnzITzV6qWaPZjWOHTiWOf3U32F1NyGmpGw/edit?gid=0#gid=0" className="block py-2.5 px-6 text-sm font-semibold text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 hover:shadow-lg transform transition-all duration-300 ease-in-out">Upload data</Link>
+        </div>
         <div className="flex items-center space-x-2 ml-4 mb-6  justify-end">
           <LogOut className="w-6 h-6 text-red-500 transform transition-transform duration-300 hover:scale-125" />
           <Link
