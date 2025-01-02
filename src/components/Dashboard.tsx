@@ -151,7 +151,7 @@ const Dashboard = () => {
                   <span className="text-lg font-semibold text-gray-700">Customer Name:</span>
                   <span className="text-lg text-gray-900">{call.customer_name}</span>
                 </div> */}
-                {/* Other details */}
+                
                 <div className="flex justify-between mb-4">
                   <span className="text-lg font-semibold text-gray-700">Recording:</span>
                   <audio
