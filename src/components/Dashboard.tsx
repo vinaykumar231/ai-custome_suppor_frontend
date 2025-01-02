@@ -74,19 +74,19 @@ const Dashboard = () => {
     <div className="bg-gray-100 min-h-screen py-10">
       <div className="container mx-auto">
         <div className=" flex gap-[80%]">
-        <div className="flex items-center space-x-2 ml-4 mb-6  justify-start">
-          <Link to="https://docs.google.com/spreadsheets/d/1mU4j8cfte4ZamNLC89CrGsARS54dTD52srC6fedUzdw/edit?gid=0#gid=0" className="block py-2.5 px-6 text-sm font-semibold text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 hover:shadow-lg transform transition-all duration-300 ease-in-out">Upload data</Link>
-        </div>
-        <div className="flex items-center space-x-2 ml-4 mb-6  justify-end">
-          <LogOut className="w-6 h-6 text-red-500 transform transition-transform duration-300 hover:scale-125" />
-          <Link
-            to="/"
-            className="block py-2.5 px-6 text-sm font-semibold text-white bg-red-600 rounded-lg shadow-md hover:bg-red-700 hover:shadow-lg transform transition-all duration-300 ease-in-out"
-            onClick={handleLogout}
-          >
-            Logout
-          </Link>
-        </div>
+          <div className="flex items-center space-x-2 ml-4 mb-6  justify-start">
+            <Link to="https://docs.google.com/spreadsheets/d/1mU4j8cfte4ZamNLC89CrGsARS54dTD52srC6fedUzdw/edit?gid=0#gid=0" className="block py-2.5 px-6 text-sm font-semibold text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 hover:shadow-lg transform transition-all duration-300 ease-in-out">Upload data</Link>
+          </div>
+          <div className="flex items-center space-x-2 ml-4 mb-6  justify-end">
+            <LogOut className="w-6 h-6 text-red-500 transform transition-transform duration-300 hover:scale-125" />
+            <Link
+              to="/"
+              className="block py-2.5 px-6 text-sm font-semibold text-white bg-red-600 rounded-lg shadow-md hover:bg-red-700 hover:shadow-lg transform transition-all duration-300 ease-in-out"
+              onClick={handleLogout}
+            >
+              Logout
+            </Link>
+          </div>
         </div>
 
         <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">MaitriAI Customer Support Dashboard</h1>
@@ -143,6 +143,27 @@ const Dashboard = () => {
                 <span className="font-medium text-gray-700">Summary:</span>
                 <p className="text-gray-900">{call.summary}</p>
               </div>
+              <div
+                key={call.call_id}
+                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                {/* <div className="flex justify-between mb-4">
+                  <span className="text-lg font-semibold text-gray-700">Customer Name:</span>
+                  <span className="text-lg text-gray-900">{call.customer_name}</span>
+                </div> */}
+                {/* Other details */}
+                <div className="flex justify-between mb-4">
+                  <span className="text-lg font-semibold text-gray-700">Recording:</span>
+                  <audio
+                    controls
+                    className="w-full"
+                  >
+                    <source src={call.recording_url} type="audio/mpeg" />
+                    Your browser does not support the audio element.
+                  </audio>
+                </div>
+              </div>
+
             </div>
           ))}
         </div>
