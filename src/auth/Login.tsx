@@ -55,7 +55,7 @@ const AuthPage = () => {
 
         switch (user.user_type) {
           case "user":
-            navigate("/dashboard");
+            navigate("/millis_dashboard");
             break;
           case "admin":
             navigate("/admin_business_msg");
